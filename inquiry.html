@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlist Bag | Bharuch Food Products</title>
+    <meta name="description" content="Review your curated collection of roasted snacks and submit an inquiry directly through WhatsApp.">
+    <link rel="icon" type="image/png" href="assets/logo/site-logo-768x143.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Free Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="app-shell-body">
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Glow Cursor (Desktop only) -->
+    <div id="cursor-glow"></div>
+
+    <!-- App-Style Floating Bottom Navigation -->
+    <nav class="app-bottom-nav" role="navigation" aria-label="App Navigation">
+        <ul class="app-nav-list">
+            <li>
+                <a href="index.html" class="app-nav-link">
+                    <i class="fa-regular fa-compass"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="products.html" class="app-nav-link">
+                    <i class="fa-regular fa-gem"></i>
+                    <span>Collection</span>
+                </a>
+            </li>
+            <li>
+                <a href="inquiry.html" class="app-nav-link active">
+                    <div class="nav-icon-wrapper">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <span class="cart-badge">0</span>
+                    </div>
+                    <span>Inquiry</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="app-nav-link">
+                    <i class="fa-regular fa-newspaper"></i>
+                    <span>Story</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="app-nav-link">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="app-main-content">
+        <!-- Page Header -->
+        <section class="page-header" aria-label="Page Title Banner">
+            <div class="container">
+                <span class="section-subtitle">Curated Bag</span>
+                <h1 class="page-title">My Wishlist Inquiry</h1>
+                <p class="page-subtitle">Send your selected items directly to our team via automated WhatsApp link.</p>
+            </div>
+        </section>
+
+        <!-- Wishlist & Form Section -->
+        <section class="inquiry-bag-section" aria-label="Inquiry Checkout Form">
+            <div class="container grid-2">
+                <!-- Left: Selected Products List -->
+                <div class="inquiry-bag-container scroll-reveal">
+                    <div class="bag-header">
+                        <h3>Selected Items</h3>
+                        <button id="clear-bag-btn" class="underline-link text-small"><i class="fa-regular fa-trash-can"></i> Clear Bag</button>
+                    </div>
+
+                    <div id="bag-items-list" class="bag-items-list">
+                        <!-- Dynamic items loaded here -->
+                    </div>
+
+                    <!-- Empty state -->
+                    <div id="bag-empty-state" class="no-results hidden">
+                        <i class="fa-regular fa-folder-open no-results-icon"></i>
+                        <h3>Your inquiry bag is empty</h3>
+                        <p>Browse our roasted peanuts, chana, and chikki collection to add items.</p>
+                        <div style="margin-top: 30px;">
+                            <a href="products.html" class="btn btn-primary ripple">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Customer details & WhatsApp trigger -->
+                <div class="inquiry-form-container scroll-reveal" data-delay="100">
+                    <div class="inquiry-checkout-box">
+                        <h3>Contact Information</h3>
+                        <p class="checkout-hint">Fill in your name and location to generate your WhatsApp inquiry text.</p>
+
+                        <form id="whatsapp-inquiry-form" novalidate>
+                            <div class="form-group">
+                                <label for="inq-name">Full Name <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-user form-icon"></i>
+                                    <input type="text" id="inq-name" required placeholder="E.g. Rajesh Shah">
+                                </div>
+                                <span class="error-msg" id="inq-name-error">Please fill in your name.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inq-city">City / Location <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-regular fa-map form-icon"></i>
+                                    <input type="text" id="inq-city" required placeholder="E.g. Bharuch, Gujarat">
+                                </div>
+                                <span class="error-msg" id="inq-city-error">Please enter your city/location.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inq-message">Additional Note (Optional)</label>
+                                <div class="input-wrapper">
+                                    <textarea id="inq-message" rows="3" placeholder="Preferred packaging, bulk order details..."></textarea>
+                                </div>
+                            </div>
+
+                            <button type="submit" id="send-wa-btn" class="btn btn-primary btn-block ripple">
+                                <i class="fa-brands fa-whatsapp btn-wa-icon"></i>
+                                <span>Inquire via WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Minimalistic Footer -->
+    <footer id="site-footer" class="app-footer">
+        <div class="footer-upper container">
+            <div class="footer-column brand">
+                <img src="assets/logo/site-logo-768x143.png" alt="Bharuch Food Logo" class="footer-logo">
+                <p>Pure raw ingredients roasted with artisanal excellence in Bholav, Bharuch. Serving crispy authentic memories since 1960.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="products.html">Collection</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Our Collection</h3>
+                <ul class="footer-links">
+                    <li><a href="products.html?category=peanuts">Peanuts Collection</a></li>
+                    <li><a href="products.html?category=chana">Roasted Chickpeas</a></li>
+                    <li><a href="products.html?category=chikki">Premium Chikkis</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Reach Us</h3>
+                <ul class="footer-contact">
+                    <li>A 35 - A 40, Udyog Nagar, Bholav, Bharuch</li>
+                    <li>+91 98241 92786</li>
+                    <li>care@bharuchfood.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-lower">
+            <div class="container footer-lower-content">
+                <p>&copy; 2026 Bharuch Food Products. All rights reserved.</p>
+                <div class="footer-meta">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Go to top of page">
+        <i class="fa-solid fa-arrow-up-long"></i>
+    </button>
+
+    <!-- Modular JS Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

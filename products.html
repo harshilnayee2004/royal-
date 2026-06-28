@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Collection | Bharuch Food Products</title>
+    <meta name="description" content="Explore our premium collection of slow-roasted peanuts, chickpeas (chana), and authentic chikkis. Filter by category, search specific products, and order.">
+    <link rel="icon" type="image/png" href="assets/logo/site-logo-768x143.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Free Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Glow Cursor (Desktop only) -->
+    <div id="cursor-glow"></div>
+
+    <!-- App-Style Floating Bottom Navigation -->
+    <nav class="app-bottom-nav" role="navigation" aria-label="App Navigation">
+        <ul class="app-nav-list">
+            <li>
+                <a href="index.html" class="app-nav-link">
+                    <i class="fa-regular fa-compass"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="products.html" class="app-nav-link active">
+                    <i class="fa-regular fa-gem"></i>
+                    <span>Collection</span>
+                </a>
+            </li>
+            <li>
+                <a href="inquiry.html" class="app-nav-link">
+                    <div class="nav-icon-wrapper">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <span class="cart-badge">0</span>
+                    </div>
+                    <span>Inquiry</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="app-nav-link">
+                    <i class="fa-regular fa-newspaper"></i>
+                    <span>Story</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="app-nav-link">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header" aria-label="Page Title Banner">
+            <div class="container">
+                <span class="section-subtitle">Catalog</span>
+                <h1 class="page-title">The Signature Collection</h1>
+                <p class="page-subtitle">Understated, healthy, crispy snacking options tailored for fine palates.</p>
+            </div>
+        </section>
+
+        <!-- Product Catalog Section -->
+        <section class="catalog-section" aria-label="Product Catalog">
+            <div class="container">
+                <!-- Search & Filters -->
+                <div class="filter-controls">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="product-search" placeholder="Search product name..." aria-label="Search through products">
+                    </div>
+                    
+                    <div class="filter-tabs" role="tablist">
+                        <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Collection</button>
+                        <button class="filter-tab" data-filter="peanuts" role="tab" aria-selected="false">Roasted Peanuts</button>
+                        <button class="filter-tab" data-filter="chana" role="tab" aria-selected="false">Roasted Chana</button>
+                        <button class="filter-tab" data-filter="chikki" role="tab" aria-selected="false">Signature Chikki</button>
+                    </div>
+                </div>
+
+                <!-- Product Grid -->
+                <div id="product-grid" class="product-grid">
+                    <!-- Skeletons while loading -->
+                    <div class="product-card skeleton">
+                        <div class="skeleton-img"></div>
+                        <div class="skeleton-text title"></div>
+                    </div>
+                    <div class="product-card skeleton">
+                        <div class="skeleton-img"></div>
+                        <div class="skeleton-text title"></div>
+                    </div>
+                </div>
+
+
+                <!-- Empty State -->
+                <div id="no-products-found" class="no-results hidden">
+                    <i class="fa-regular fa-face-frown no-results-icon"></i>
+                    <h3>No collection items found</h3>
+                    <p>Try modifying your search or select another tab category above.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Minimalistic Footer -->
+    <footer id="site-footer">
+        <div class="footer-upper container">
+            <div class="footer-column brand">
+                <img src="assets/logo/site-logo-768x143.png" alt="Bharuch Food Logo" class="footer-logo">
+                <p>Pure raw ingredients roasted with artisanal excellence in Bholav, Bharuch. Serving crispy authentic memories since 1960.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="products.html">Collection</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Our Collection</h3>
+                <ul class="footer-links">
+                    <li><a href="products.html?category=peanuts">Peanuts Collection</a></li>
+                    <li><a href="products.html?category=chana">Roasted Chickpeas</a></li>
+                    <li><a href="products.html?category=chikki">Premium Chikkis</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Reach Us</h3>
+                <ul class="footer-contact">
+                    <li>A 35 - A 40, Udyog Nagar, Bholav, Bharuch</li>
+                    <li>+91 98241 92786</li>
+                    <li>care@bharuchfood.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-lower">
+            <div class="container footer-lower-content">
+                <p>&copy; 2026 Bharuch Food Products. All rights reserved.</p>
+                <div class="footer-meta">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Go to top of page">
+        <i class="fa-solid fa-arrow-up-long"></i>
+    </button>
+
+    <!-- Product Details Modal Overlay -->
+    <div id="product-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="modal-product-title">
+        <div class="modal-container">
+            <button id="modal-close" class="modal-close-btn" aria-label="Close modal dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-content-grid">
+                <div class="modal-media">
+                    <img id="modal-product-img" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <div id="modal-product-category" class="product-badge">Category</div>
+                    <h2 id="modal-product-title">Product Name</h2>
+                    
+                    <p id="modal-product-desc" class="modal-desc">Detailed product description goes here...</p>
+                    
+                    <div class="modal-meta-box">
+                        <div class="meta-section">
+                            <h4>Ingredients</h4>
+                            <p id="modal-product-ingredients">-</p>
+                        </div>
+                        <div class="meta-section">
+                            <h4>Available Sizes</h4>
+                            <div id="modal-product-sizes" class="size-tags">
+                                <!-- Tags dynamically added -->
+                            </div>
+                        </div>
+                        <div class="meta-section">
+                            <h4>Storage Instructions</h4>
+                            <p id="modal-product-storage">Store in a cool, dry place. Keep in an airtight container once opened.</p>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" id="modal-inquire-btn" class="btn btn-primary ripple">Quick Inquiry</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modular JS Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

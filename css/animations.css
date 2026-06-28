@@ -1,0 +1,246 @@
+/* ==========================================================================
+   Minimalistic Transitions & Animation System
+   ========================================================================== */
+
+/* Page Loader Fade Out */
+#loader-screen.fade-out {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.loader-logo {
+    animation: loader-pulse-slow 2.4s infinite alternate;
+}
+
+@keyframes loader-pulse-slow {
+    0% { transform: scale(1); opacity: 0.85; }
+    100% { transform: scale(1.02); opacity: 1; }
+}
+
+.loader-bar-container {
+    width: 140px;
+    height: 1px;
+    background-color: var(--color-border);
+    margin: 28px auto;
+    overflow: hidden;
+}
+
+.loader-bar {
+    width: 0%;
+    height: 100%;
+    background-color: var(--color-accent);
+    animation: load-progress-minimal 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes load-progress-minimal {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* Scroll Progress Bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--scroll-progress);
+    height: 3px;
+    background-color: var(--color-accent);
+    z-index: 1050;
+    transition: width 0.1s ease;
+}
+
+/* Cursor Glow Effect (Desktop Only) */
+#cursor-glow {
+    position: fixed;
+    width: 260px;
+    height: 260px;
+    background: radial-gradient(circle, rgba(184, 151, 90, 0.05) 0%, rgba(184, 151, 90, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+    display: none;
+}
+
+/* Ripple Button Effect */
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(184, 151, 90, 0.25);
+    transform: scale(0);
+    animation: ripple-minimal 0.7s cubic-bezier(0.1, 0.8, 0.3, 1);
+    pointer-events: none;
+}
+
+@keyframes ripple-minimal {
+    to {
+        transform: scale(3.5);
+        opacity: 0;
+    }
+}
+
+/* Back to Top button */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-bg-primary);
+    color: var(--color-primary);
+    border: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(15px);
+    transition: var(--transition-smooth);
+}
+
+#back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#back-to-top:hover {
+    border-color: var(--color-primary);
+    color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+/* Hero Entrance Animations */
+.reveal-text {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: reveal-up-minimal 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+}
+
+.reveal-blur {
+    opacity: 0;
+    filter: blur(8px);
+    transform: scale(0.99);
+    animation: reveal-blur-minimal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+}
+
+.reveal-blur-delayed {
+    opacity: 0;
+    filter: blur(8px);
+    transform: scale(0.99);
+    animation: reveal-blur-minimal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+}
+
+@keyframes reveal-up-minimal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes reveal-blur-minimal {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
+
+/* Scroll Triggered reveal points */
+.scroll-reveal .reveal-up,
+.scroll-reveal .reveal-left,
+.scroll-reveal .reveal-right,
+.scroll-reveal .reveal-scale,
+.scroll-reveal .reveal-blur-item {
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), 
+                filter 1s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform, filter;
+}
+
+.scroll-reveal .reveal-up {
+    transform: translateY(40px);
+}
+
+.scroll-reveal .reveal-left {
+    transform: translateX(-40px);
+}
+
+.scroll-reveal .reveal-right {
+    transform: translateX(40px);
+}
+
+.scroll-reveal .reveal-scale {
+    transform: scale(0.97);
+}
+
+.scroll-reveal .reveal-blur-item {
+    filter: blur(10px);
+}
+
+/* Enabled state */
+.scroll-reveal.active-reveal .reveal-up,
+.scroll-reveal.active-reveal .reveal-left,
+.scroll-reveal.active-reveal .reveal-right,
+.scroll-reveal.active-reveal .reveal-scale {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+.scroll-reveal.active-reveal .reveal-blur-item {
+    opacity: 1;
+    filter: blur(0);
+}
+
+/* Loading animations */
+#loader-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg-primary);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+}
+
+.loader-text {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent-hover);
+}
+
+/* Timeline scroll animations */
+.timeline-item.active-reveal .timeline-content {
+    animation: timeline-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes timeline-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

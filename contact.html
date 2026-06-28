@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Bharuch Food Products</title>
+    <meta name="description" content="Get in touch with our team. Send an inquiry for bulk orders, distributorship, or product availability. Visit our factory in Bharuch, Gujarat.">
+    <link rel="icon" type="image/png" href="assets/logo/site-logo-768x143.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Free Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Glow Cursor (Desktop only) -->
+    <div id="cursor-glow"></div>
+
+    <!-- App-Style Floating Bottom Navigation -->
+    <nav class="app-bottom-nav" role="navigation" aria-label="App Navigation">
+        <ul class="app-nav-list">
+            <li>
+                <a href="index.html" class="app-nav-link">
+                    <i class="fa-regular fa-compass"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="products.html" class="app-nav-link">
+                    <i class="fa-regular fa-gem"></i>
+                    <span>Collection</span>
+                </a>
+            </li>
+            <li>
+                <a href="inquiry.html" class="app-nav-link">
+                    <div class="nav-icon-wrapper">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <span class="cart-badge">0</span>
+                    </div>
+                    <span>Inquiry</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="app-nav-link">
+                    <i class="fa-regular fa-newspaper"></i>
+                    <span>Story</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="app-nav-link active">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header" aria-label="Page Title Banner">
+            <div class="container">
+                <span class="section-subtitle">Reach Us</span>
+                <h1 class="page-title">Connect With Us</h1>
+                <p class="page-subtitle">For wholesale, institutional orders, and distributor packaging inquiries.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section scroll-reveal" aria-label="Contact Details and Forms">
+            <div class="container grid-2">
+                <!-- Info Column -->
+                <div class="contact-info reveal-left">
+                    <span class="section-subtitle text-light">Get In Touch</span>
+                    <h2 class="section-title text-light">We value your inquiries</h2>
+                    <p class="contact-lead">Have questions regarding pricing, packing capacities, or shipping terms? Speak with our team.</p>
+                    
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <i class="fa-solid fa-map-location-dot detail-icon"></i>
+                            <div class="detail-text">
+                                <h4>Factory Address</h4>
+                                <p>A 35 to A 40, Udyog Nagar, Bholav,<br>Bharuch, Gujarat 392002, India</p>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <i class="fa-solid fa-phone-volume detail-icon"></i>
+                            <div class="detail-text">
+                                <h4>Phone Support</h4>
+                                <p><a href="tel:+919824192786">+91 98241 92786</a><br><a href="tel:+9107043629224">+91 70436 29224</a></p>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <i class="fa-solid fa-envelope-open-text detail-icon"></i>
+                            <div class="detail-text">
+                                <h4>Electronic Mail</h4>
+                                <p><a href="mailto:care@bharuchfood.com">care@bharuchfood.com</a><br><a href="mailto:sales@bharuchfood.com">sales@bharuchfood.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <i class="fa-solid fa-business-time detail-icon"></i>
+                            <div class="detail-text">
+                                <h4>Office Hours</h4>
+                                <p>Monday - Saturday: 09:00 AM - 07:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="contact-form-container reveal-right">
+                    <h3>Submit Inquiry</h3>
+                    <form id="inquiry-form" novalidate>
+                        <div class="form-group">
+                            <label for="form-name">Your Full Name <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-user form-icon"></i>
+                                <input type="text" id="form-name" required placeholder="E.g. Jay Patel">
+                            </div>
+                            <span class="error-msg" id="name-error">Please fill in your name.</span>
+                        </div>
+
+                        <div class="form-row grid-2">
+                            <div class="form-group">
+                                <label for="form-email">Your Email Address <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-envelope form-icon"></i>
+                                    <input type="email" id="form-email" required placeholder="name@domain.com">
+                                </div>
+                                <span class="error-msg" id="email-error">Please enter a valid email.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="form-phone">Mobile Number <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <i class="fa-solid fa-mobile-screen-button form-icon"></i>
+                                    <input type="tel" id="form-phone" required placeholder="10-digit number">
+                                </div>
+                                <span class="error-msg" id="phone-error">Please enter a valid phone number.</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-product">Select Product Interest</label>
+                            <div class="input-wrapper">
+                                <i class="fa-solid fa-store form-icon"></i>
+                                <select id="form-product">
+                                    <option value="" selected>General Inquiry / Distributorship</option>
+                                    <option value="peanuts">Premium Peanuts</option>
+                                    <option value="chana">Roasted Chana</option>
+                                    <option value="chikki">Heritage Chikkis</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="form-message">Your Message</label>
+                            <div class="input-wrapper">
+                                <textarea id="form-message" rows="4" placeholder="Briefly describe your question or order requirements..."></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block ripple" id="form-submit-btn">
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+
+                    <!-- Success Animation Overlay -->
+                    <div id="form-success-overlay" class="success-overlay hidden">
+                        <div class="success-content">
+                            <div class="success-circle">
+                                <i class="fa-solid fa-check checkmark"></i>
+                            </div>
+                            <h3>Inquiry Sent Successfully!</h3>
+                            <p>Thank you for reaching out. A support coordinator will be in touch with you shortly.</p>
+                            <button class="btn btn-outline" id="success-close-btn">Dismiss</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Wrapper -->
+            <div class="map-embed-container container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2776.7824962358054!2d73.00195206111036!3d21.719805469543257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0214fdbdb4611%3A0xd98df858c69e003a!2sBharuch%20Food%20Products!5e0!3m2!1sen!2sin!4v1702727169420!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map of factory location"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- Minimalistic Footer -->
+    <footer id="site-footer">
+        <div class="footer-upper container">
+            <div class="footer-column brand">
+                <img src="assets/logo/site-logo-768x143.png" alt="Bharuch Food Logo" class="footer-logo">
+                <p>Pure raw ingredients roasted with artisanal excellence in Bholav, Bharuch. Serving crispy authentic memories since 1960.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Our Story</a></li>
+                    <li><a href="products.html">Collection</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Our Collection</h3>
+                <ul class="footer-links">
+                    <li><a href="products.html?category=peanuts">Peanuts Collection</a></li>
+                    <li><a href="products.html?category=chana">Roasted Chickpeas</a></li>
+                    <li><a href="products.html?category=chikki">Premium Chikkis</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Reach Us</h3>
+                <ul class="footer-contact">
+                    <li>A 35 - A 40, Udyog Nagar, Bholav, Bharuch</li>
+                    <li>+91 98241 92786</li>
+                    <li>care@bharuchfood.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-lower">
+            <div class="container footer-lower-content">
+                <p>&copy; 2026 Bharuch Food Products. All rights reserved.</p>
+                <div class="footer-meta">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Go to top of page">
+        <i class="fa-solid fa-arrow-up-long"></i>
+    </button>
+
+    <!-- Modular JS Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

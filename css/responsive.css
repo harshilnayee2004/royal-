@@ -1,0 +1,372 @@
+/* ==========================================================================
+   Minimalistic Responsive Media Queries
+   ========================================================================== */
+
+/* Prevent horizontal scroll overflow globally */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Product Grid - 4x4 Grid default */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+@media (max-width: 1140px) {
+    .container {
+        padding: 0 40px;
+    }
+    
+    .grid-2 {
+        gap: 50px;
+    }
+    
+    .stats-border-grid {
+        grid-template-columns: repeat(2, 1fr);
+        border-bottom: 1px solid var(--color-border);
+    }
+    
+    .stat-item:nth-child(2) {
+        border-right: none;
+    }
+    
+    .stat-item:nth-child(3) {
+        border-top: 1px solid var(--color-border);
+    }
+    
+    .stat-item:nth-child(4) {
+        border-top: 1px solid var(--color-border);
+        border-right: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+    }
+    
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .categories-grid > a:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px; /* Reduced to maximize mobile grid space */
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .categories-section,
+    .teaser-section,
+    .story-section,
+    .about-process-section,
+    .catalog-section,
+    .contact-section {
+        padding: 70px 0;
+    }
+
+    /* Split Lookbook Hero mobile adapters */
+    .hero-split-grid {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto 340px;
+        height: auto;
+    }
+
+    .hero-text-panel {
+        padding: 60px 24px !important;
+        text-align: center;
+        align-items: center;
+        order: 1;
+    }
+
+    .hero-brand-logo {
+        margin: 0 auto 24px auto !important;
+        max-width: 200px !important;
+    }
+
+    .hero-visual-panel {
+        height: 340px !important;
+        order: 2;
+    }
+
+    .heritage-year {
+        font-size: 5.5rem !important;
+        top: 15px;
+        right: 15px;
+        opacity: 0.25;
+    }
+
+    .hero-action-buttons {
+        justify-content: center;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-action-buttons .btn {
+        flex: 1;
+        padding: 14px 10px;
+        font-size: 0.75rem;
+    }
+
+    /* Enforce vertical scrolling 2-column grid layout for portrait cards on mobile */
+    .product-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 28px 16px !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .product-info-compact {
+        padding: 12px 4px;
+    }
+
+    .product-info-compact h3 {
+        font-size: 0.95rem !important;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .product-badge-overlay-compact {
+        display: none !important; /* Hide overlay badge to maximize visual space */
+    }
+
+    /* Skeleton mobile constraints */
+    .skeleton .skeleton-text {
+        margin: 8px auto !important;
+        height: 10px !important;
+        width: 70% !important;
+    }
+    .skeleton .skeleton-text.desc {
+        display: none !important;
+    }
+
+    .floating-add-btn {
+        width: 28px !important;
+        height: 28px !important;
+        top: 10px !important;
+        right: 10px !important;
+        bottom: auto !important;
+        left: auto !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* Mobile Bottom Tab Bar fix (strict no overflow) */
+    .app-bottom-nav {
+        width: 100vw !important;
+        max-width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .app-nav-list {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Stats Grid */
+    .stats-border-grid {
+        grid-template-columns: 1fr;
+        border-right: 1px solid var(--color-border);
+        border-bottom: none;
+    }
+    
+    .stat-item {
+        border-bottom: 1px solid var(--color-border) !important;
+        border-right: none !important;
+        border-top: none !important;
+    }
+
+    /* Timeline Mobile adaptations */
+    .timeline-line {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 45px;
+        padding-right: 0;
+        text-align: left !important;
+        margin-bottom: 35px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-item:nth-child(even) .timeline-badge,
+    .timeline-item:nth-child(odd) .timeline-badge {
+        left: 4px;
+        right: auto;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+    }
+
+    /* Products controls */
+    .filter-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .search-box {
+        width: 100%;
+    }
+    
+    .filter-tabs {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        gap: 16px;
+    }
+    
+    .filter-tab {
+        white-space: nowrap;
+    }
+
+    /* Form Container */
+    .contact-form-container {
+        padding: 30px 24px;
+    }
+
+    /* Modal dialog */
+    .modal-content-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-media {
+        padding: 24px;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+    
+    .modal-media img {
+        max-height: 220px;
+    }
+    
+    .modal-details {
+        padding: 30px 24px;
+    }
+    
+    .footer-upper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-lower-content {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    /* Wishlist bag mobile tweaks */
+    .inquiry-bag-section {
+        padding: 40px 0;
+    }
+
+    .bag-item-row {
+        grid-template-columns: 60px 1fr 40px;
+        gap: 16px;
+        padding: 16px 0;
+    }
+
+    .bag-item-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .bag-item-details h4 {
+        font-size: 0.95rem;
+    }
+
+    .inquiry-checkout-box {
+        padding: 30px 20px;
+    }
+}
+
+/* ==========================================================================
+   Desktop App-Style Float Dock
+   ========================================================================== */
+@media (min-width: 769px) {
+    .app-bottom-nav {
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        min-width: 460px;
+        max-width: 600px;
+        height: 60px;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background-color: rgba(21, 21, 20, 0.96);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        padding: 0 16px;
+    }
+
+    .app-nav-link {
+        color: rgba(255, 255, 255, 0.6);
+        padding: 4px 0;
+    }
+
+    .app-nav-link i {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 1.15rem;
+    }
+
+    .app-nav-link:hover,
+    .app-nav-link.active {
+        color: var(--color-accent);
+    }
+
+    .app-nav-link:hover i,
+    .app-nav-link.active i {
+        color: var(--color-accent);
+    }
+
+    .cart-badge {
+        background-color: var(--color-accent);
+        color: var(--color-primary);
+        border-color: #151514;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 28px 16px !important;
+    }
+    
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .categories-grid > a:last-child {
+        grid-column: span 1;
+    }
+}
