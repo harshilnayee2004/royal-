@@ -619,6 +619,55 @@ html, body {
         gap: 10px !important;
         margin-bottom: 24px !important;
     }
+
+    /* Cinematic Hero Mobile styling */
+    .cinematic-hero {
+        min-height: auto !important;
+        padding: 80px 0 60px 0 !important;
+    }
+
+    .hero-radial-backdrop {
+        background: radial-gradient(circle at 50% 40%, rgba(212, 163, 89, 0.12) 0%, transparent 70%) !important;
+    }
+
+    .floating-decor {
+        max-width: 90px !important;
+    }
+
+    .floating-decor.item-peanuts {
+        top: 4% !important;
+        left: 2% !important;
+    }
+
+    .floating-decor.item-chikki {
+        top: 5% !important;
+        right: 2% !important;
+    }
+
+    .floating-decor.item-chana {
+        bottom: 4% !important;
+        right: 4% !important;
+    }
+
+    /* Atelier Promo Card Mobile styling */
+    .atelier-promo-section {
+        padding: 50px 0 !important;
+    }
+
+    .atelier-promo-card {
+        grid-template-columns: 1fr !important;
+        gap: 36px !important;
+        padding: 36px 20px !important;
+        text-align: center !important;
+    }
+
+    .promo-left {
+        align-items: center !important;
+    }
+
+    .promo-illustration {
+        max-width: 140px !important;
+    }
 }
 
 @media (max-width: 480px) {
