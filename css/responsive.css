@@ -126,24 +126,46 @@ html, body {
     }
 
     /* Mobile collage and stats strip visual updates */
+    .hero-main-title {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 16px !important;
+    }
+
+    .hero-desc {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 28px !important;
+        max-width: 100% !important;
+    }
+
+    /* Mobile collage and stats strip visual updates */
     .hero-stats-strip {
-        justify-content: center;
-        gap: 20px !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 12px !important;
         margin-top: 32px !important;
-        width: 100%;
+        width: 100% !important;
+        border-top: 1px solid var(--color-border);
+        padding-top: 20px !important;
     }
 
     .hero-stats-strip .stat-item {
         align-items: center !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
     .hero-stats-strip .stat-num {
-        font-size: 1.5rem !important;
+        font-size: 1.4rem !important;
     }
 
     .hero-stats-strip .stat-lbl {
-        font-size: 0.65rem !important;
-        text-align: center;
+        font-size: 0.6rem !important;
+        text-align: center !important;
+        white-space: normal !important;
+        line-height: 1.35 !important;
     }
 
     .hero-collage-container {
@@ -155,18 +177,21 @@ html, body {
     }
 
     .item-peanuts {
-        top: 10% !important;
-        left: 6% !important;
+        top: 8% !important;
+        left: 5% !important;
+        transform: rotate(-12deg) scale(0.8) !important;
     }
 
     .item-chana {
-        bottom: 8% !important;
-        right: 4% !important;
+        bottom: 5% !important;
+        right: 2% !important;
+        transform: rotate(8deg) scale(0.85) !important;
     }
 
     .item-chikki {
         top: 25% !important;
-        right: 22% !important;
+        right: 15% !important;
+        transform: rotate(-4deg) scale(1.0) !important;
     }
 
     /* Mode CTA banner mobile layout */
