@@ -82,47 +82,66 @@ html, body {
         padding: 70px 0;
     }
 
-    /* Split Lookbook Hero mobile adapters */
+    /* Split Lookbook Hero mobile adapters (strictly no horizontal overflow) */
     .hero-split-grid {
         grid-template-columns: 1fr !important;
-        grid-template-rows: auto 340px;
-        height: auto;
+        grid-template-rows: auto 340px !important;
+        height: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
     }
 
     .hero-text-panel {
-        padding: 60px 24px !important;
-        text-align: center;
-        align-items: center;
-        order: 1;
+        padding: 40px 20px !important;
+        text-align: center !important;
+        align-items: center !important;
+        order: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
     }
 
     .hero-brand-logo {
-        margin: 0 auto 24px auto !important;
-        max-width: 200px !important;
+        margin: 0 auto 20px auto !important;
+        max-width: 180px !important;
+        width: 100% !important;
+        height: auto !important;
     }
 
     .hero-visual-panel {
         height: 340px !important;
-        order: 2;
+        width: 100% !important;
+        max-width: 100% !important;
+        order: 2 !important;
+        overflow: hidden !important;
     }
 
     .heritage-year {
-        font-size: 5.5rem !important;
-        top: 15px;
-        right: 15px;
-        opacity: 0.25;
+        font-size: 4.5rem !important;
+        top: 10px !important;
+        right: 10px !important;
+        opacity: 0.15 !important;
     }
 
     .hero-action-buttons {
-        justify-content: center;
-        width: 100%;
-        gap: 12px;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 12px !important;
+        margin-bottom: 24px !important;
+        box-sizing: border-box !important;
     }
 
     .hero-action-buttons .btn {
-        flex: 1;
-        padding: 14px 10px;
-        font-size: 0.75rem;
+        flex: 1 !important;
+        padding: 12px 8px !important;
+        font-size: 0.75rem !important;
+        text-align: center !important;
+        white-space: nowrap !important;
     }
 
     /* Mobile collage and stats strip visual updates */
