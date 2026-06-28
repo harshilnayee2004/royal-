@@ -400,6 +400,10 @@ html, body {
    Desktop App-Style Float Dock
    ========================================================================== */
 @media (min-width: 769px) {
+    :root {
+        --nav-rendered-height: 84px; /* 24px bottom + 60px height */
+    }
+
     .app-bottom-nav {
         bottom: 24px;
         left: 50%;
@@ -457,8 +461,12 @@ html, body {
     }
 
     .bulk-summary-bar {
-        bottom: 60px !important; /* Positions above bottom navbar */
         padding: 12px 0 !important;
+    }
+
+    .editorial-hero {
+        height: auto !important;
+        overflow: visible !important;
     }
 
     .bulk-summary-info {
@@ -469,6 +477,45 @@ html, body {
     .btn-bulk-wa {
         padding: 8px 16px !important;
         font-size: 0.75rem !important;
+    }
+
+    /* Mobile story layout adjustments */
+    .about-hero-banner {
+        height: 40vh !important;
+        min-height: 300px !important;
+    }
+
+    .about-hero-title {
+        font-size: 2rem !important;
+    }
+
+    .narrative-row {
+        gap: 24px !important;
+        margin-bottom: 60px !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .narrative-row.reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .narrative-text h3 {
+        font-size: 1.6rem !important;
+        margin-bottom: 12px !important;
+        margin-top: 16px;
+    }
+
+    .pull-quote-section {
+        padding: 60px 0 !important;
+    }
+
+    .pull-quote {
+        font-size: 1.5rem !important;
+    }
+
+    .about-footer-link {
+        padding: 60px 0 !important;
     }
 }
 

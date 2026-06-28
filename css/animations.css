@@ -84,7 +84,7 @@
 /* Back to Top button */
 #back-to-top {
     position: fixed;
-    bottom: 30px;
+    bottom: calc(var(--nav-rendered-height) + 16px) !important;
     right: 30px;
     width: 44px;
     height: 44px;
