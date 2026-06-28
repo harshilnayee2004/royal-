@@ -78,67 +78,64 @@
     </nav>
 
     <main class="app-main-content">
-        <!-- Cinematic Centered Hero Section -->
-        <section id="home-hero" class="cinematic-hero" aria-label="Welcome Screen">
-            <!-- Background Radial Lighting and Decorative Floating Collage Elements -->
-            <div class="hero-radial-backdrop"></div>
-            <div class="hero-floating-collage">
-                <img src="assets/illustrations/peanuts-illustration.png" alt="Peanuts Decor" class="floating-decor item-peanuts">
-                <img src="assets/illustrations/chana-illustration.png" alt="Chana Decor" class="floating-decor item-chana">
-                <img src="assets/illustrations/chikki-illustration.png" alt="Chikki Decor" class="floating-decor item-chikki">
+        <!-- Immersive Mobile-First Hero Dashboard (Editorial Console) -->
+        <section id="home-hero" class="immersive-dashboard-hero" aria-label="Welcome Screen">
+            <!-- Floating Background Illustration Elements for Parallax Depth -->
+            <div class="dashboard-backdrop-elements">
+                <img src="assets/illustrations/peanuts-illustration.png" alt="" class="bg-float-item float-peanuts" aria-hidden="true">
+                <img src="assets/illustrations/chana-illustration.png" alt="" class="bg-float-item float-chana" aria-hidden="true">
+                <img src="assets/illustrations/chikki-illustration.png" alt="" class="bg-float-item float-chikki" aria-hidden="true">
+                <div class="dashboard-glow"></div>
             </div>
 
-            <div class="hero-content container text-center reveal-up">
-                <img src="assets/logo/site-logo-768x143.png" alt="Bharuch Food Logo" class="hero-brand-logo">
-                <span class="brand-badge">The Art of Roasting · Est. 1960</span>
-                
-                <h1 class="hero-main-title">The Art of Slow-Roasting,<br>Perfected.</h1>
-                
-                <p class="hero-desc">
-                    Dry-roasted inside copper drums over heated sand since 1960. 
-                    Experience the timeless crunch of Gujarat's premium snacking heritage.
-                </p>
-                
-                <div class="hero-action-buttons">
-                    <a href="products.html" class="btn btn-primary ripple">Explore Collection</a>
-                    <a href="products.html?mode=bulk" class="btn btn-outline-dark ripple">Wholesale Order</a>
+            <!-- Central Content Panel -->
+            <div class="dashboard-content-wrapper">
+                <!-- Brand Identity Header -->
+                <header class="dashboard-brand-header">
+                    <img src="assets/logo/site-logo-768x143.png" alt="Bharuch Food Logo" class="dashboard-logo">
+                    <span class="dashboard-tagline">The Art of Roasting Since 1960</span>
+                </header>
+
+                <!-- Premium Floating Glass Console -->
+                <div class="dashboard-console-card">
+                    <h1 class="console-title">Understated Snacking Luxury</h1>
+                    <p class="console-desc">Artisanal dry-roasted peanuts, high-protein chickpeas, and traditional brittles crafted in Gujarat.</p>
+                    
+                    <!-- Immersive Segment Selector CTAs -->
+                    <div class="console-actions">
+                        <a href="products.html" class="console-btn btn-retail-link">
+                            <span class="btn-sub">Retail Catalog</span>
+                            <span class="btn-main">Shop Personal Crate <i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                        <a href="products.html?mode=bulk" class="console-btn btn-bulk-link">
+                            <span class="btn-sub">Wholesale Orders</span>
+                            <span class="btn-main">Inquire Bulk by the kg <i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Short Stat Strip under CTAs -->
-                <div class="hero-stats-strip">
-                    <div class="stat-item">
-                        <span class="stat-num">60+</span>
-                        <span class="stat-lbl">Years Heritage</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-num">25+</span>
-                        <span class="stat-lbl">Snack Flavors</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-num">Pan-GJ</span>
-                        <span class="stat-lbl">Delivery Network</span>
+                <!-- Horizontal Quick-Link Category Scroller -->
+                <div class="dashboard-categories-scroller">
+                    <span class="scroller-label">Quick Collections:</span>
+                    <div class="scroller-row">
+                        <a href="products.html?category=peanuts" class="scroller-pill">
+                            <img src="assets/illustrations/peanut-icon.png" alt="" class="pill-icon">
+                            <span>Peanuts</span>
+                        </a>
+                        <a href="products.html?category=chana" class="scroller-pill">
+                            <img src="assets/illustrations/chana-icon.png" alt="" class="pill-icon">
+                            <span>Chana</span>
+                        </a>
+                        <a href="products.html?category=chikki" class="scroller-pill">
+                            <img src="assets/illustrations/chikki-icon.png" alt="" class="pill-icon">
+                            <span>Chikki</span>
+                        </a>
+                        <a href="atelier.html" class="scroller-pill special">
+                            <i class="fa-solid fa-volume-high pill-icon"></i>
+                            <span>Atelier Experience</span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Mode-Aware CTA Banner -->
-        <section class="mode-cta-banner scroll-reveal" aria-label="Purchase Modes Selection">
-            <div class="banner-split">
-                <a href="products.html" class="banner-panel panel-retail ripple-bg">
-                    <div class="panel-content">
-                        <span class="panel-subtitle">For Personal Snacking</span>
-                        <h2 class="panel-title">Explore Retail Collection</h2>
-                        <span class="panel-link">Browse Catalog <i class="fa-solid fa-arrow-right-long"></i></span>
-                    </div>
-                </a>
-                <a href="products.html?mode=bulk" class="banner-panel panel-bulk ripple-bg">
-                    <div class="panel-content">
-                        <span class="panel-subtitle">Wholesale & Business</span>
-                        <h2 class="panel-title">Order Wholesale by the kg</h2>
-                        <span class="panel-link">Switch to Wholesale <i class="fa-solid fa-arrow-right-long"></i></span>
-                    </div>
-                </a>
             </div>
         </section>
 

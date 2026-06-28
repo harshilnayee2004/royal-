@@ -589,35 +589,36 @@ html, body {
         font-size: 0.95rem !important;
     }
 
-    /* Cinematic Hero Mobile styling */
-    .cinematic-hero {
-        min-height: auto !important;
-        padding: 80px 0 60px 0 !important;
+    /* Sensory Atelier mobile adjustments */
+    .atelier-section {
+        padding: 40px 0 !important;
     }
 
-    .hero-radial-backdrop {
-        background: radial-gradient(circle at 50% 40%, rgba(212, 163, 89, 0.12) 0%, transparent 70%) !important;
+    .soundscape-box,
+    .roast-dial-box,
+    .crate-builder-box {
+        padding: 24px 16px !important;
     }
 
-    .floating-decor {
-        max-width: 90px !important;
+    .soundscape-controls {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
     }
 
-    .floating-decor.item-peanuts {
-        top: 4% !important;
-        left: 2% !important;
+    .roast-metric-row {
+        flex-direction: column !important;
+        gap: 6px !important;
     }
 
-    .floating-decor.item-chikki {
-        top: 5% !important;
-        right: 2% !important;
+    .metric-label {
+        min-width: auto !important;
     }
 
-    .floating-decor.item-chana {
-        bottom: 4% !important;
-        right: 4% !important;
+    .crate-visual-grid {
+        gap: 10px !important;
+        margin-bottom: 24px !important;
     }
-
 }
 
 @media (max-width: 480px) {
@@ -632,5 +633,44 @@ html, body {
     
     .categories-grid > a:last-child {
         grid-column: span 1;
+    }
+
+    .scroller-row {
+        justify-content: flex-start !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        width: calc(100% + 32px) !important;
+        margin-left: -16px !important;
+    }
+
+    .console-title {
+        font-size: 1.8rem !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .float-peanuts {
+        width: 320px !important;
+        top: 15% !important;
+        left: 5% !important;
+        opacity: 0.55 !important;
+    }
+
+    .float-chana {
+        width: 280px !important;
+        bottom: 15% !important;
+        right: 5% !important;
+        opacity: 0.55 !important;
+    }
+
+    .float-chikki {
+        width: 240px !important;
+        top: 20% !important;
+        right: 15% !important;
+        opacity: 0.45 !important;
+    }
+
+    .scroller-row {
+        justify-content: center !important;
     }
 }
