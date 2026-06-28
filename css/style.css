@@ -164,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Page Headers (Multi-page Title blocks) */
 .page-header {
     background-color: var(--color-bg-secondary);
-    padding: 120px 0 80px 0;
+    padding: 80px 0 50px 0;
     border-bottom: 1px solid var(--color-border);
 }
 

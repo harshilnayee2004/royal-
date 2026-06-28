@@ -517,6 +517,20 @@ html, body {
     .about-footer-link {
         padding: 60px 0 !important;
     }
+
+    /* Page header compact mobile layout */
+    .page-header {
+        padding: 40px 0 24px 0 !important;
+    }
+
+    .page-title {
+        font-size: 2.2rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .page-subtitle {
+        font-size: 0.95rem !important;
+    }
 }
 
 @media (max-width: 480px) {
