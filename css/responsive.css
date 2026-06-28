@@ -125,6 +125,94 @@ html, body {
         font-size: 0.75rem;
     }
 
+    /* Mobile collage and stats strip visual updates */
+    .hero-stats-strip {
+        justify-content: center;
+        gap: 20px !important;
+        margin-top: 32px !important;
+        width: 100%;
+    }
+
+    .hero-stats-strip .stat-item {
+        align-items: center !important;
+    }
+
+    .hero-stats-strip .stat-num {
+        font-size: 1.5rem !important;
+    }
+
+    .hero-stats-strip .stat-lbl {
+        font-size: 0.65rem !important;
+        text-align: center;
+    }
+
+    .hero-collage-container {
+        height: 340px !important;
+    }
+
+    .collage-item {
+        max-width: 48% !important;
+    }
+
+    .item-peanuts {
+        top: 10% !important;
+        left: 6% !important;
+    }
+
+    .item-chana {
+        bottom: 8% !important;
+        right: 4% !important;
+    }
+
+    .item-chikki {
+        top: 25% !important;
+        right: 22% !important;
+    }
+
+    /* Mode CTA banner mobile layout */
+    .banner-split {
+        grid-template-columns: 1fr !important;
+    }
+
+    .banner-panel {
+        padding: 50px 24px !important;
+    }
+
+    .panel-retail {
+        border-right: none !important;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .panel-title {
+        font-size: 1.6rem !important;
+        margin-bottom: 12px !important;
+    }
+
+    /* Bestsellers section mobile spacing */
+    .bestsellers-section {
+        padding: 60px 0 !important;
+    }
+
+    .bestsellers-row {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        gap: 16px !important;
+    }
+
+    /* Trust badges grid layout */
+    .trust-markers-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        margin-top: 30px !important;
+        padding-top: 20px !important;
+        align-items: center;
+    }
+
+    .trust-marker {
+        align-items: center !important;
+        text-align: center;
+    }
+
     /* Enforce vertical scrolling 2-column grid layout for portrait cards on mobile */
     .product-grid {
         display: grid !important;
@@ -353,6 +441,34 @@ html, body {
         background-color: var(--color-accent);
         color: var(--color-primary);
         border-color: #151514;
+    }
+
+    /* Mobile Overrides for new retail/bulk features */
+    .mode-toggle-container {
+        margin: 0 auto 24px auto !important;
+    }
+
+    .floating-quick-buy-btn {
+        width: 28px !important;
+        height: 28px !important;
+        top: 44px !important;
+        right: 10px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .bulk-summary-bar {
+        bottom: 60px !important; /* Positions above bottom navbar */
+        padding: 12px 0 !important;
+    }
+
+    .bulk-summary-info {
+        font-size: 0.85rem !important;
+        gap: 10px !important;
+    }
+
+    .btn-bulk-wa {
+        padding: 8px 16px !important;
+        font-size: 0.75rem !important;
     }
 }
 

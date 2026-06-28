@@ -98,16 +98,53 @@
                         <a href="products.html" class="btn btn-primary ripple">View Collection</a>
                         <a href="contact.html" class="btn btn-outline-dark ripple">Reach Us</a>
                     </div>
-                </div>
 
-                <!-- Visual Carousel Panel -->
-                <div class="hero-visual-panel reveal-right">
-                    <div class="hero-carousel">
-                        <div class="carousel-slide active" style="background-image: linear-gradient(rgba(21, 21, 21, 0.15), rgba(21, 21, 21, 0.25)), url('assets/images/peanuts/peanuts-2.jpg');"></div>
-                        <div class="carousel-slide" style="background-image: linear-gradient(rgba(21, 21, 21, 0.15), rgba(21, 21, 21, 0.25)), url('assets/images/chikki/Pista-Chikki-1536x1097.png');"></div>
-                        <div class="carousel-slide" style="background-image: linear-gradient(rgba(21, 21, 21, 0.15), rgba(21, 21, 21, 0.25)), url('assets/images/chikki/dry-fruits-1536x1097.png');"></div>
+                    <!-- Short Stat Strip under CTAs -->
+                    <div class="hero-stats-strip">
+                        <div class="stat-item">
+                            <span class="stat-num">60+</span>
+                            <span class="stat-lbl">Years Roasting Heritage</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">25+</span>
+                            <span class="stat-lbl">Flavors & Varieties</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">Pan-GJ</span>
+                            <span class="stat-lbl">Delivery Network <!-- CONFIRM WITH CLIENT --></span>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Visual Collage Panel -->
+                <div class="hero-visual-panel reveal-right">
+                    <div class="hero-collage-container">
+                        <img src="assets/illustrations/peanuts-illustration.png" alt="Roasted Peanuts" class="collage-item item-peanuts">
+                        <img src="assets/illustrations/chana-illustration.png" alt="Slow Roasted Chana" class="collage-item item-chana">
+                        <img src="assets/illustrations/chikki-illustration.png" alt="Premium Chikki" class="collage-item item-chikki">
+                        <div class="collage-backdrop"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mode-Aware CTA Banner -->
+        <section class="mode-cta-banner scroll-reveal" aria-label="Purchase Modes Selection">
+            <div class="banner-split">
+                <a href="products.html" class="banner-panel panel-retail ripple-bg">
+                    <div class="panel-content">
+                        <span class="panel-subtitle">For Personal Snacking</span>
+                        <h2 class="panel-title">Explore Retail Collection</h2>
+                        <span class="panel-link">Browse Catalog <i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </a>
+                <a href="products.html?mode=bulk" class="banner-panel panel-bulk ripple-bg">
+                    <div class="panel-content">
+                        <span class="panel-subtitle">Wholesale & Business</span>
+                        <h2 class="panel-title">Order Wholesale by the kg</h2>
+                        <span class="panel-link">Switch to Wholesale <i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </a>
             </div>
         </section>
 
@@ -124,7 +161,7 @@
                     <!-- Category 1 -->
                     <a href="products.html?category=peanuts" class="category-block reveal-up">
                         <div class="category-img-box">
-                            <img src="assets/images/peanuts/peanut.png" alt="Peanuts Collection" loading="lazy">
+                            <img src="assets/illustrations/peanuts-illustration.png" alt="Peanuts Collection" loading="lazy">
                         </div>
                         <div class="category-info">
                             <h3>Peanuts</h3>
@@ -135,7 +172,7 @@
                     <!-- Category 2 -->
                     <a href="products.html?category=chana" class="category-block reveal-up" data-delay="100">
                         <div class="category-img-box">
-                            <img src="assets/images/chana/Salted-Chana.png" alt="Chana Collection" loading="lazy">
+                            <img src="assets/illustrations/chana-illustration.png" alt="Chana Collection" loading="lazy">
                         </div>
                         <div class="category-info">
                             <h3>Chana</h3>
@@ -146,13 +183,27 @@
                     <!-- Category 3 -->
                     <a href="products.html?category=chikki" class="category-block reveal-up" data-delay="200">
                         <div class="category-img-box">
-                            <img src="assets/images/chikki/Pista-Chikki-1536x1097.png" alt="Chikki Collection" loading="lazy">
+                            <img src="assets/illustrations/chikki-illustration.png" alt="Chikki Collection" loading="lazy">
                         </div>
                         <div class="category-info">
                             <h3>Chikki</h3>
                             <span class="category-link-text">Explore Chikkis <i class="fa-solid fa-arrow-right-long"></i></span>
                         </div>
                     </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horizontally Scrollable Bestsellers Section -->
+        <section class="bestsellers-section scroll-reveal" aria-label="Bestselling Flavors">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle">Trending Selection</span>
+                    <h2 class="section-title">The Bestsellers</h2>
+                    <p class="section-desc">Hand-picked client favorites from our signature roasting ovens.</p>
+                </div>
+                <div id="bestsellers-list" class="bestsellers-row">
+                    <!-- Dynamically rendered by js/app.js -->
                 </div>
             </div>
         </section>
@@ -165,6 +216,23 @@
                     <h2 class="section-title">A Snacking Legacy of Sixty Years</h2>
                     <p class="lead">Crafting benchmarks for quality snacks since 1960. Discover our timeless methods and commit to the purity of dry-roasted flavors.</p>
                     <p>What started as a small local roasting enterprise in Bharuch has grown into a premium brand. We have continuously evolved, implementing state-of-the-art hygiene controls while keeping the authentic roasting methods intact. We invite you to learn about our process and experience our taste profiles.</p>
+                    
+                    <!-- Trust Badges Marker Grid -->
+                    <div class="trust-markers-grid">
+                        <div class="trust-marker">
+                            <i class="fa-solid fa-medal trust-icon"></i>
+                            <span class="trust-text">Premium Grade Ingredients</span>
+                        </div>
+                        <div class="trust-marker">
+                            <i class="fa-solid fa-leaf trust-icon"></i>
+                            <span class="trust-text">No Artificial Preservatives <!-- CONFIRM WITH CLIENT --></span>
+                        </div>
+                        <div class="trust-marker">
+                            <i class="fa-solid fa-location-dot trust-icon"></i>
+                            <span class="trust-text">Proudly Made in Bharuch</span>
+                        </div>
+                    </div>
+                    
                     <div style="margin-top: 40px;">
                         <a href="about.html" class="underline-link">Learn Our Story <i class="fa-solid fa-arrow-right-long"></i></a>
                     </div>
@@ -183,7 +251,7 @@
             <div class="container text-center">
                 <span class="section-subtitle">Curated Wishlist</span>
                 <h2 class="section-title">Create Custom Selections</h2>
-                <p class="section-desc" style="max-width: 700px; margin: 0 auto 40px auto;">Browse our premium range of roasted peanuts, chana, and chikkis. Curate your desired snack assortment and send a direct inquiry to our WhatsApp coordinator instantly.</p>
+                <p class="section-desc" style="max-width: 700px; margin: 0 auto 40px auto;">Browse our premium range of roasted peanuts, chana, and chikkis. Curate your desired snack assortment or select wholesale quantities, and send a direct inquiry to our WhatsApp coordinator instantly.</p>
                 <a href="products.html" class="btn btn-primary ripple">Curate My Collection</a>
             </div>
         </section>

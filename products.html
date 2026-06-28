@@ -86,11 +86,16 @@
                         <input type="text" id="product-search" placeholder="Search product name..." aria-label="Search through products">
                     </div>
                     
+                    <div class="mode-toggle-container">
+                        <button id="mode-retail-btn" class="mode-toggle-btn active" data-mode="retail" role="tab" aria-selected="true">Retail</button>
+                        <button id="mode-bulk-btn" class="mode-toggle-btn" data-mode="bulk" role="tab" aria-selected="false">Bulk by kg</button>
+                    </div>
+
                     <div class="filter-tabs" role="tablist">
                         <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Collection</button>
-                        <button class="filter-tab" data-filter="peanuts" role="tab" aria-selected="false">Roasted Peanuts</button>
-                        <button class="filter-tab" data-filter="chana" role="tab" aria-selected="false">Roasted Chana</button>
-                        <button class="filter-tab" data-filter="chikki" role="tab" aria-selected="false">Signature Chikki</button>
+                        <button class="filter-tab" data-filter="peanuts" role="tab" aria-selected="false"><img src="assets/illustrations/peanut-icon.png" alt="" class="tab-icon">Roasted Peanuts</button>
+                        <button class="filter-tab" data-filter="chana" role="tab" aria-selected="false"><img src="assets/illustrations/chana-icon.png" alt="" class="tab-icon">Roasted Chana</button>
+                        <button class="filter-tab" data-filter="chikki" role="tab" aria-selected="false"><img src="assets/illustrations/chikki-icon.png" alt="" class="tab-icon">Signature Chikki</button>
                     </div>
                 </div>
 
@@ -107,7 +112,6 @@
                     </div>
                 </div>
 
-
                 <!-- Empty State -->
                 <div id="no-products-found" class="no-results hidden">
                     <i class="fa-regular fa-face-frown no-results-icon"></i>
@@ -116,6 +120,20 @@
                 </div>
             </div>
         </section>
+
+        <!-- Bulk Mode Summary Bar (Sticky at Bottom) -->
+        <div id="bulk-summary-bar" class="bulk-summary-bar hidden">
+            <div class="container bulk-summary-container">
+                <div class="bulk-summary-info">
+                    <span class="bulk-summary-count"><strong id="bulk-total-items">0</strong> Items</span>
+                    <span class="bulk-summary-divider">|</span>
+                    <span class="bulk-summary-weight"><strong id="bulk-total-weight">0</strong> kg Total</span>
+                </div>
+                <button id="send-bulk-wa-btn" class="btn btn-primary btn-bulk-wa ripple">
+                    <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+                </button>
+            </div>
+        </div>
     </main>
 
     <!-- Minimalistic Footer -->
@@ -209,7 +227,9 @@
                         </div>
                     </div>
 
-                    <a href="contact.html" id="modal-inquire-btn" class="btn btn-primary ripple">Quick Inquiry</a>
+                    <div id="modal-actions-container" class="modal-actions-container">
+                        <a href="contact.html" id="modal-inquire-btn" class="btn btn-primary ripple">Quick Inquiry</a>
+                    </div>
                 </div>
             </div>
         </div>

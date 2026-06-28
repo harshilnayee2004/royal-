@@ -4,6 +4,7 @@
  */
 import { products } from './products.js';
 import { getCart, removeFromCart, clearCart } from './cart.js';
+import { buildWhatsAppLink } from './whatsapp.js';
 
 export function initInquiryPage() {
     const listContainer = document.getElementById('bag-items-list');
@@ -143,9 +144,7 @@ export function initInquiryPage() {
                 messageBody += `----------------------------------\n`;
                 messageBody += `Sent from Bharuch Food Website`;
 
-                const phone = '919824192786'; // Target business number
-                const encodedMsg = encodeURIComponent(messageBody);
-                const waLink = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedMsg}`;
+                const waLink = buildWhatsAppLink(messageBody);
 
                 // Redirect to WhatsApp
                 window.open(waLink, '_blank');

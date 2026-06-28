@@ -87,23 +87,13 @@ export const products = [
     },
     {
         id: "p9",
-        name: "Premium Salted Peanuts",
+        name: "Salted Peanuts",
         category: "peanuts",
-        image: "assets/images/peanuts/peanut.png",
-        description: "A larger sharing pack of our gold-standard salted peanuts. Slow-roasted in traditional small batches to guarantee that signature crunch.",
-        ingredients: "Peanuts, Refined Oil, Edible Salt.",
-        sizes: ["200g Pouch", "400g Pouch"],
+        image: "assets/images/peanuts/Salted-Peanut-200g.png",
+        description: "Our flagship roasted and salted peanuts, prepared in a larger family-size pack. Slow-roasted using the same traditional methods as our snack-size packs, for everyday snacking.",
+        ingredients: "Selected Peanut Kernels, Refined Cottonseed Oil, Edible Common Salt.",
+        sizes: ["200g Pouch", "400g Pouch"], // CONFIRM WITH CLIENT: sizes inferred from filename
         storage: "Store in a cool, dry place. Keep in an airtight container once opened."
-    },
-    {
-        id: "p10",
-        name: "Roasted Peanuts (Heritage Pack)",
-        category: "peanuts",
-        image: "assets/images/peanuts/peanuts-2.jpg",
-        description: "Whole peanuts roasted in their shell or as split halves following our vintage 1960 recipes. Brings you the authentic smoky taste of Bharuch's soil.",
-        ingredients: "Whole Selected Peanuts, Edible Salt.",
-        sizes: ["250g Box", "500g Family Box"],
-        storage: "Keep in an airtight jar to protect against atmospheric moisture."
     },
 
     // --- CHANA CATEGORY ---
