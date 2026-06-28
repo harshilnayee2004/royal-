@@ -588,6 +588,37 @@ html, body {
     .page-subtitle {
         font-size: 0.95rem !important;
     }
+
+    /* Sensory Atelier mobile adjustments */
+    .atelier-section {
+        padding: 40px 0 !important;
+    }
+
+    .soundscape-box,
+    .roast-dial-box,
+    .crate-builder-box {
+        padding: 24px 16px !important;
+    }
+
+    .soundscape-controls {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+    }
+
+    .roast-metric-row {
+        flex-direction: column !important;
+        gap: 6px !important;
+    }
+
+    .metric-label {
+        min-width: auto !important;
+    }
+
+    .crate-visual-grid {
+        gap: 10px !important;
+        margin-bottom: 24px !important;
+    }
 }
 
 @media (max-width: 480px) {
