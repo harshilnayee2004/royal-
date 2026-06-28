@@ -589,37 +589,6 @@ html, body {
         font-size: 0.95rem !important;
     }
 
-    /* Sensory Atelier mobile adjustments */
-    .atelier-section {
-        padding: 40px 0 !important;
-    }
-
-    .soundscape-box,
-    .roast-dial-box,
-    .crate-builder-box {
-        padding: 24px 16px !important;
-    }
-
-    .soundscape-controls {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 16px !important;
-    }
-
-    .roast-metric-row {
-        flex-direction: column !important;
-        gap: 6px !important;
-    }
-
-    .metric-label {
-        min-width: auto !important;
-    }
-
-    .crate-visual-grid {
-        gap: 10px !important;
-        margin-bottom: 24px !important;
-    }
-
     /* Cinematic Hero Mobile styling */
     .cinematic-hero {
         min-height: auto !important;
@@ -649,25 +618,6 @@ html, body {
         right: 4% !important;
     }
 
-    /* Atelier Promo Card Mobile styling */
-    .atelier-promo-section {
-        padding: 50px 0 !important;
-    }
-
-    .atelier-promo-card {
-        grid-template-columns: 1fr !important;
-        gap: 36px !important;
-        padding: 36px 20px !important;
-        text-align: center !important;
-    }
-
-    .promo-left {
-        align-items: center !important;
-    }
-
-    .promo-illustration {
-        max-width: 140px !important;
-    }
 }
 
 @media (max-width: 480px) {
